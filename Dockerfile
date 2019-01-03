@@ -14,4 +14,5 @@ RUN npm install iobroker --unsafe-perm && \
     npm i --production --unsafe-perm && \
     update-rc.d iobroker.sh remove && \
     echo $(hostname) > .install_host
+EXPOSE 8081 8082
 CMD ["sh", "/opt/scripts/iobroker_startup.sh"]
