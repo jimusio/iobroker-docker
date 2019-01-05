@@ -9,12 +9,12 @@ if [ -f .install_host ]; then
         rm .install_host
 fi
 
-if [ ! -f backups/.skip_restore ]; then
+if [ ! -f .skip_restore ]; then
     for file in $(ls -r backups/*_backupiobroker* 2>/dev/null);
     do
         echo restore latest $file as first bootup.
         ./iobroker restore $file
-        touch backups/.skip_restore
+        touch .skip_restore
         break
     done
 fi
