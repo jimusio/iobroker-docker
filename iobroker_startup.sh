@@ -19,4 +19,6 @@ if [ ! -f .skip_restore ]; then
     done
 fi
 
+/opt/scripts/iobroker_autobackup.sh &
+
 node node_modules/iobroker.js-controller/controller.js >/opt/scripts/docker_iobroker_log.txt 2>&1

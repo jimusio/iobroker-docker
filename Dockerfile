@@ -5,7 +5,8 @@ MAINTAINER SchumyHao
 RUN mkdir -p /opt/scripts/ && chmod 777 /opt/scripts/
 WORKDIR /opt/scripts/
 ADD iobroker_startup.sh iobroker_startup.sh
-RUN chmod +x iobroker_startup.sh
+ADD iobroker_autobackup.sh iobroker_autobackup.sh
+RUN chmod +x iobroker_startup.sh iobroker_autobackup.sh
 
 RUN mkdir -p /opt/iobroker/ && chmod 777 /opt/iobroker/
 WORKDIR /opt/iobroker/
